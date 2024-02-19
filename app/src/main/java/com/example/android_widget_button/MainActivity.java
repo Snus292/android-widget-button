@@ -16,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
     // Обработка нажатия кнопки
     public void sendMessage(View view) {
         TextView textView = findViewById(R.id.textView);
-        EditText editText = findViewById(R.id.editText);
-        textView.setText("Добро пожаловать, " + editText.getText());
+        EditText editTextFirstName = findViewById(R.id.editTextFirstName);
+        EditText editTextLastName = findViewById(R.id.editTextLastName);
+
+        String firstName = editTextFirstName.getText().toString();
+        String lastName = editTextLastName.getText().toString();
+        textView.setText("Добро пожаловать, " + firstName + " " + lastName);
     }
 }
